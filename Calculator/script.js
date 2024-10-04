@@ -12,7 +12,7 @@ keyEquals.addEventListener("click", ()=>{
       let result = eval(inputValue);
       console.log("result: " , result , typeof result);
       displayText.value = result;
-      if( displayText.value==="Infinity" || displayText.value==="-Infinity" || isNaN(displayText.value) ){
+      if( displayText.value==="Infinity" || displayText.value==="-Infinity" || displayText.value==="NaN" ){
         flag = true;
       }
 

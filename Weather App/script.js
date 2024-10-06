@@ -26,7 +26,8 @@ const dayForcastTime1 = document.querySelector('#dayForcastTime1');
 const dayForcastTime2 = document.querySelector('#dayForcastTime2');
 const dayForcastTime3 = document.querySelector('#dayForcastTime3');
 
-let apiId = config.API_KEY;
+let apiId = window.config.API_KEY;
+console.log("my apiId is :" , apiId);
 
 async function getWeather(city) {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiId}&units=metric`);

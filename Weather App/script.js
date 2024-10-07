@@ -1,3 +1,5 @@
+import {config} from "./config";
+
 // Get the elements dynamically
 const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#searchBtn');
@@ -27,7 +29,8 @@ const dayForcastTime2 = document.querySelector('#dayForcastTime2');
 const dayForcastTime3 = document.querySelector('#dayForcastTime3');
 
 // let apiId = window.config.API_KEY;
-let apiId = "4d3b54b7a4ece628ad84a0428d8c9c2c";
+
+let apiId = config.TOKEN;
 console.log("my apiId is :" , apiId);
 
 async function getWeather(city) {

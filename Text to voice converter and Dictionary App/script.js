@@ -47,6 +47,13 @@ generateBtn.addEventListener("click", () => {
 })
 
 
+
+
+
+
+
+
+
 let searchInput = document.querySelector("#searchInput");
 let wordSearch = document.querySelector("#wordSearch");
 
@@ -67,6 +74,14 @@ async function getData(query) {
   try {
     const d = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${query}`);
     const data = await d.json();
+
+    if (data.title === "No Definitions Found") {
+      document.querySelector("#altSolDiv").style.display = "block";
+      document.querySelector("#solDiv").style.display = "none";
+      document.querySelector("#altSolDiv").innerText = data.title;
+      return;
+    }
+
     console.log(data[0]);
 
     /// Set word and phonetic

@@ -227,6 +227,7 @@ main {
   justify-content: center;
   padding: 20px;
   cursor: pointer;
+  display: none;
 }
 .soundIcon:hover{
   background-color: skyblue;

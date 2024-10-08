@@ -14,6 +14,7 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 
 
 let apiKey = import.meta.env.VITE_API_KEY_ISE;
+// let apiKey = "FVgqKhVRWSefcpjUQqxQNnJ_sVY -4sO0TlDfy2gGPXY";
 
 
 
@@ -33,15 +34,23 @@ async function search(query) {
 
     if (data.results.length!==0) {
 
-      data.results.map(item => {
+      data.results.map( item => {
 
         let img = document.createElement("img");
         img.id = "image";
         img.src = item.urls.full;
-        img.alt = item.title;
+        img.alt = item.title || "image";
         let imgLink = document.createElement("a");
         imgLink.href = item.links.html;
         imgLink.target = "_blank";
+
+        // imgdiv
+          // a
+            // img
+          //a
+           //img
+          // a
+            //img
 
         imgLink.appendChild(img);
         imageDiv.appendChild(imgLink);

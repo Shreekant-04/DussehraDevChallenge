@@ -13,7 +13,6 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 })
 
 
-// let apiKey = "FVgqKhVRWSefcpjUQqxQNnJ_sVY-4sO0TlDfy2gGPXY";
 let apiKey = import.meta.env.VITE_API_KEY_ISE;
 
 

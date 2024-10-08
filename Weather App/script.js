@@ -1,6 +1,11 @@
-//
+
 // require("dotenv").config();
-import {config} from "./config";
+
+// import dotenv from 'dotenv';
+// import {config} from "./config";
+// dotenv.config()
+
+
 
 // Get the elements dynamically
 const searchInput = document.querySelector('#searchInput');
@@ -30,10 +35,11 @@ const dayForcastTime1 = document.querySelector('#dayForcastTime1');
 const dayForcastTime2 = document.querySelector('#dayForcastTime2');
 const dayForcastTime3 = document.querySelector('#dayForcastTime3');
 
-let apiId = config.API_KEY;
+
+let apiId = CONFIG.API_KEY;
 // let apiId = process.env.API_KEY;
 // let apiId = "4d3b54b7a4ece628ad84a0428d8c9c2c";
-console.log("my apiId is :" , apiId);
+// console.log("my apiId is :" , apiId);
 
 async function getWeather(city) {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiId}&units=metric`);
